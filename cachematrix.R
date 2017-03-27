@@ -45,7 +45,14 @@ cachemean <- function(x, ...) {
 }
 
 ## Write a short comment describing this function
-## makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
+## makeCacheMatrix: This function creates a special "matrix" object 
+## that can cache its inverse.
+# The function, `makeVector,' creates a special "matrix" object, which is
+# really a list containing a function to
+# 1.  set the value of the matrix
+# 2.  get the value of the matrix
+# 3.  set the value of the inverse matrix
+# 4.  get the value of the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   invX<-NULL
@@ -62,9 +69,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-# cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
-# If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should 
-# retrieve the inverse from the cache.
+# cacheSolve: This function computes the inverse of the special "matrix" 
+# returned by makeCacheMatrix above. 
+# If the inverse has already been calculated (and the matrix has
+# not changed), then the cacheSolve should retrieve the inverse 
+# from the cache.
 
 cacheSolve <- function(x, ...) {
   invX <- x$getInverse()
