@@ -82,7 +82,7 @@ cacheSolve <- function(x, ...) {
     return(invX)
   }
   dataMx <- x$get()
-  invX <- 1/dataMx
+  invX <- solve(dataMx,...)
   x$setInverse(invX)
   ## Return a matrix that is the inverse of 'x'
   invX
